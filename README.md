@@ -141,11 +141,3 @@ ChatBot_Diabetes_Project/
 3. Commit your changes (`git commit -am 'Add new feature'`)
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Support
-
-For questions or issues, open an issue on GitHub.
