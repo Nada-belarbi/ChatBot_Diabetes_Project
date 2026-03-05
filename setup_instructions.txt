@@ -1,0 +1,108 @@
+# === 1. Set up and start MongoDB ===
+# Make sure MongoDB is started before continuing.
+
+# To start MongoDB on Windows (default on localhost:27017):
+mongod --dbpath "C:\data\db"
+
+# To access the MongoDB shell:
+mongo
+
+# Create a database for the project in the MongoDB shell:
+use diabetes_chatbot
+
+# === 2. Set up the backend (Flask) ===
+# Navigate to the backend folder:
+cd Backend
+
+# Create and activate a Python virtual environment:
+python -m venv venv
+venv\Scripts\activate
+
+# Install Python dependencies:
+pip install -r requirements.txt
+
+# requirements.txt file (updated versions):
+# Flask==2.3.2
+# Flask-Cors==4.0.0
+# pymongo==4.4.1
+# requests==2.31.0
+# Werkzeug==2.3.7
+# python-dotenv==1.0.0
+# PyJWT==2.8.0
+# email-validator==2.0.0
+
+# Copy the .env.example file to .env and configure the variables:
+cp .env.example .env
+# Edit .env with your values (MONGODB_URI, JWT_SECRET, etc.)
+
+# Start the Flask server:
+python app.py .env.example .env
+
+
+# The backend is now available at: http://127.0.0.1:5000
+
+# === 3. Set up and start the frontend (React) ===
+# Navigate to the frontend folder:
+cd frontendapp1
+
+# Install Node.js dependencies:
+npm install
+
+# Copy the .env.example file to .env and configure REACT_APP_API_URL:
+cp .env.example .env
+# Edit .env with your backend API URL (default: http://127.0.0.1:5000)
+
+# Start the React development server:
+npm start
+
+# The frontend is now available at: http://localhost:3000
+
+# === 4. Set up and start Rasa ===
+# Navigate to the Rasa project folder:
+cd rasa_project
+
+# Create and activate a Python virtual environment for Rasa:
+python -m venv rasa_env
+rasa_env\Scripts\activate
+
+# Install Rasa dependencies:
+pip install rasa
+
+# Start the Rasa server:
+rasa run
+
+# If you are using custom actions, also start the action server:
+rasa run actions
+
+# Test Rasa by sending a request:
+curl -X POST http://localhost:5005/webhooks/rest/webhook -H "Content-Type: application/json" -d "{\"sender\": \"test_user\", \"message\": \"start session\"}"
+
+# === 5. Configure configuration files ===
+# Check and adjust the following files as needed:
+# - Backend/.env (environment variables for MongoDB, JWT, etc.)
+# - frontendapp1/.env (backend API URL)
+# - rasa_project/endpoints.yml (to connect Rasa to the action server)
+# - rasa_project/domain.yml (for actions, slots, intents, etc.)
+# - Backend/app.py (for the Flask backend)
+# - frontendapp1/src/components/ (React files)
+
+# === 6. Final verification ===
+# Make sure each component is started in a separate terminal:
+# - MongoDB (`mongod --dbpath "C:\data\db"`)
+# - Flask backend (`cd Backend && python app.py`)
+# - React frontend (`cd frontendapp1 && npm start`)
+# - Rasa (`cd rasa_project && rasa run`)
+# - Rasa action server, if used (`cd rasa_project && rasa run actions`)
+
+# You can check the data in MongoDB with:
+mongo
+use diabetes_chatbot
+db.users.find().pretty()
+db.glycemia_records.find().pretty()
+db.chat_history.find().pretty()
+
+# === 7. Test the project ===
+# Open your browser and go to http://localhost:3000
+# Register, log in, record blood sugar data, chat with the chatbot.
+# The chatbot uses Rasa to understand messages and respond via the backend API.
+

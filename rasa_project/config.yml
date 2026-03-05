@@ -1,0 +1,46 @@
+# The config recipe.
+recipe: default.v1
+
+# The assistant project unique identifier
+assistant_id: 20250116-152509-oblique-facade
+
+# Configuration for Rasa NLU.
+language: fr
+
+pipeline:
+  - name: SpacyNLP
+    model: "fr_core_news_md"
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: SpacyEntityExtractor
+  - name: DIETClassifier
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+  - name: FallbackClassifier
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+# Configuration for Rasa Core.
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

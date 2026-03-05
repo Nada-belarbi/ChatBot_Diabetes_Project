@@ -1,0 +1,346 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bonne_humeur
+  - mauvaise_humeur
+  - diabete
+  - informatif_gestionnel
+  - informatif_type1
+  - informatif_type2
+  - cause_gesta
+  - cause_type1
+  - cause_type2
+  - symptome_gesta
+  - symptome_type1
+  - symptome_type2
+  - risque_gesta
+  - risque_type1
+  - risque_type2
+  - diagnostic_type1
+  - diagnostic_type2
+  - diagnostic_gesta
+  - traitement_type1
+  - traitement_type2
+  - traitement_gesta
+  - complication_type1
+  - complication_type2
+  - complication_gesta
+  - prevention_type1  
+  - prevention_type2  
+  - prevention_gesta  
+  - perspectives_type1  
+  - perspectives_type2  
+  - perspectives_gesta  
+  - hors_sujet
+responses:
+  utter_greet:
+    - text: "Salut ! Comment vas-tu ?"
+  
+  utter_hors_sujet:
+    - text: "Je ne sais pas, ma spécialité est le diabète. Pose-moi une question sur cette maladie ! 😊"
+  
+  utter_bonne_humeur:
+    - text: "Super. As-tu besoin d'un renseignement ?"
+
+  utter_mauvaise_humeur:
+    - text: "Que se passe-t-il ?"
+
+  utter_goodbye:
+    - text: "Prends soin de toi et à bientôt !"
+
+  utter_diabete_question:
+    - text: "De quel type de diabète aimerais-tu que je te parle ? Diabète gestationnel, diabète de type 1, ou diabète de type 2 ?"
+
+  utter_informations_gestionnel:
+    - text: |
+        Le diabète gestationnel (DG) est une forme de diabète qui survient pendant la grossesse, généralement au deuxième ou troisième trimestre, chez des femmes qui n’étaient pas diabétiques avant leur grossesse.
+        - **Caractéristique principale :** Augmentation de la glycémie pendant la grossesse.
+        - **Spécificité :** Disparaît généralement après l’accouchement, bien que certaines femmes puissent développer un diabète de type 2 plus tard.
+
+  utter_informations_type_1:
+    - text: |
+        Le diabète de type 1 est une maladie chronique auto-immune où le pancréas ne produit plus d'insuline.
+        - **Caractéristique principale :** Déficit complet ou quasi complet en insuline.
+        - **Cause :** Réaction auto-immune détruisant les cellules bêta du pancréas.
+        - **Groupes touchés :** Principalement diagnostiqué chez les enfants, les adolescents et les jeunes adultes, mais peut survenir à tout âge.
+
+  utter_informations_type_2:
+    - text: |
+        Le diabète de type 2 est une maladie chronique caractérisée par une résistance à l'insuline et/ou une diminution progressive de la production d'insuline par le pancréas.
+        - **Caractéristique principale :** L’organisme n’utilise pas efficacement l’insuline produite (résistance à l’insuline).
+        - **Cause :** Combinaison de facteurs génétiques, environnementaux et liés au mode de vie.
+        - **Groupes touchés :** Principalement les adultes de plus de 45 ans, mais il est de plus en plus fréquent chez les jeunes, y compris les enfants.
+
+  utter_causes_type1:
+    - text: |
+        Le diabète de type 1 est causé par une combinaison de facteurs génétiques et environnementaux :
+        - **Réaction auto-immune :** Le système immunitaire attaque les cellules productrices d’insuline.
+        - **Facteurs génétiques :** Présence de certains gènes (par exemple, HLA-DR3 ou HLA-DR4) et historique familial de diabète de type 1.
+        - **Facteurs environnementaux (hypothétiques) :** Infections virales (ex. entérovirus) et exposition à certains produits chimiques ou toxines.
+
+  utter_causes_type2:
+    - text: |
+        Le diabète de type 2 résulte de multiples causes souvent liées au mode de vie et à des prédispositions génétiques :
+        - **Résistance à l'insuline :** Les cellules ne répondent pas correctement à l’insuline, ce qui empêche le glucose d’entrer efficacement dans les cellules.
+        - **Dysfonctionnement des cellules bêta :** Les cellules productrices d'insuline du pancréas deviennent moins efficaces avec le temps.
+
+  utter_causes_gestionnel:
+    - text: |
+        Le diabète gestationnel résulte de changements hormonaux normaux liés à la grossesse :
+        - **Mécanisme :** Le placenta produit des hormones qui augmentent la résistance à l’insuline. Le pancréas doit produire plus d’insuline pour compenser. Si cette production supplémentaire n’est pas suffisante, la glycémie augmente.
+
+  utter_symptome_gesta:
+    - text: |
+        Les symptômes du diabète gestationnel sont souvent absents, mais dans certains cas, ils peuvent inclure :
+        - **Soif excessive**.
+        - **Urination fréquente**.
+        - **Fatigue inhabituelle**.
+        - **Vision floue**.
+        - **Infections fréquentes** (urinaires, vaginales).
+        Cependant, ces symptômes sont communs à la grossesse et ne permettent pas toujours de suspecter un diabète gestationnel.
+
+  utter_symptome_type1:
+    - text: |
+        Les symptômes du diabète de type 1 apparaissent souvent rapidement et peuvent inclure :
+        - **Soif excessive** (polydipsie).
+        - **Besoin fréquent d'uriner** (polyurie).
+        - **Perte de poids inexpliquée**.
+        - **Faim excessive** (polyphagie).
+        - **Fatigue ou léthargie**.
+        - **Vision floue**.
+        En cas de symptômes graves, il peut y avoir :
+        - **Nausées et vomissements**.
+        - **Douleurs abdominales**.
+        - **Respiration rapide** ou **odeur fruitée de l’haleine** (signes d'acidocétose diabétique).
+
+  utter_symptome_type2:
+    - text: |
+        Les symptômes du diabète de type 2 se développent lentement et peuvent être légers au début, voire absents. Les symptômes fréquents incluent :
+        - **Fatigue persistante**.
+        - **Soif excessive** (polydipsie).
+        - **Urination fréquente** (polyurie).
+        - **Faim excessive** (polyphagie).
+        - **Vision floue**.
+        - **Cicatrisation lente des plaies** ou **infections fréquentes** (peau, gencives, infections urinaires).
+        Les symptômes graves peuvent inclure :
+        - **Perte de poids inexpliquée**.
+        - **Picotements ou engourdissements** dans les mains ou les pieds (neuropathie).
+
+
+  utter_risque_gesta:
+    - text: |
+        Les facteurs de risque du diabète gestationnel incluent :
+        - **Antécédents médicaux :** Diabète gestationnel lors d’une grossesse précédente.
+        - **Poids excessif :** Surpoids ou obésité avant la grossesse.
+        - **Manque d’activité physique :** Faible niveau d'activité physique avant la grossesse.
+        - **Antécédents familiaux :** Historique familial de diabète de type 2.
+        - **Origine ethnique :** Risque accru chez les femmes d'origine asiatique, africaine ou latino-américaine.
+        - **Âge avancé :** Risque accru après 35 ans.
+
+  utter_risque_type1:
+    - text: |
+        Les facteurs de risque du diabète de type 1 incluent :
+        - **Antécédents familiaux :** Un parent ou un frère/sœur atteint de diabète de type 1.
+        - **Origine ethnique :** Plus fréquent chez les personnes d'origine caucasienne.
+        - **Environnement :** Exposition précoce à des infections virales ou un sevrage précoce de l’allaitement.
+
+  utter_risque_type2:
+    - text: |
+        Les facteurs de risque du diabète de type 2 incluent :
+        - **Facteurs liés au mode de vie :**
+            - Obésité, particulièrement l’accumulation de graisse abdominale.
+            - Manque d’activité physique.
+            - Alimentation riche en sucres simples, en graisses saturées et pauvre en fibres.
+        - **Facteurs génétiques :**
+            - Antécédents familiaux de diabète de type 2.
+            - Origine ethnique (risque accru chez les personnes d’origine asiatique, africaine ou latino-américaine).
+        - **Facteurs supplémentaires :**
+            - Âge avancé (risque accru après 45 ans).
+            - Hypertension artérielle.
+            - Syndrome des ovaires polykystiques (SOPK).
+            - Antécédents de diabète gestationnel.
+
+  utter_diagnostic_type1:
+    - text: |
+        Le diagnostic du diabète de type 1 repose sur plusieurs tests sanguins pour mesurer les niveaux de glucose et la production d'insuline :
+        1. **Glycémie à jeun** : Taux de glucose ≥ 126 mg/dL (7 mmol/L).
+        2. **Hémoglobine glyquée (HbA1c)** : Taux ≥ 6,5 %.
+        3. **Test oral de tolérance au glucose (OGTT)** : Taux ≥ 200 mg/dL (11,1 mmol/L) après ingestion de glucose.
+        4. **Dosage des auto-anticorps** : Recherche d’anticorps spécifiques (anti-GAD, anti-IA-2, anti-insuline, anti-zinc T8).
+
+  utter_diagnostic_type2:
+    - text: |
+        Le diagnostic du diabète de type 2 repose sur plusieurs tests pour mesurer les niveaux de glucose et l'hémoglobine glyquée :
+        1. **Glycémie à jeun** : 
+           - Normale : < 100 mg/dL (5,6 mmol/L).
+           - Prédiabète : 100-125 mg/dL (5,6-6,9 mmol/L).
+           - Diabète : ≥ 126 mg/dL (7 mmol/L).
+        2. **Hémoglobine glyquée (HbA1c)** : 
+           - Normale : < 5,7 %.
+           - Prédiabète : 5,7-6,4 %.
+           - Diabète : ≥ 6,5 %.
+        3. **Test de tolérance au glucose (OGTT)** : 
+           - Normale : < 140 mg/dL (7,8 mmol/L) après ingestion de glucose.
+           - Diabète : ≥ 200 mg/dL (11,1 mmol/L).
+        4. **Glycémie aléatoire** : ≥ 200 mg/dL (11,1 mmol/L) avec symptômes.
+
+  utter_diagnostic_gesta:
+    - text: |
+        Le dépistage du diabète gestationnel est généralement effectué entre la 24ᵉ et la 28ᵉ semaine de grossesse. Les tests incluent :
+        1. **Hyperglycémie provoquée par voie orale (HGPO)** : 
+           - 50 g de glucose : La glycémie est mesurée 1 heure après l’ingestion. Si le résultat est supérieur à un seuil prédéfini (ex. 130-140 mg/dL), un test plus approfondi est réalisé.
+        2. **Test diagnostique (75 g ou 100 g de glucose)** :
+           - La glycémie est mesurée à jeun, puis 1, 2, et parfois 3 heures après ingestion du glucose.
+           - Résultats anormaux selon des seuils définis.
+        3. **Seuils pour le diagnostic** (test à 75 g) :
+           - À jeun : ≥ 92 mg/dL (5,1 mmol/L).
+           - À 1 heure : ≥ 180 mg/dL (10 mmol/L).
+           - À 2 heures : ≥ 153 mg/dL (8,5 mmol/L).
+
+  utter_traitement_type1:
+    - text: |
+        Le traitement du diabète de type 1 repose principalement sur l'insulinothérapie et des modifications du mode de vie :
+        A. **Insulinothérapie** :
+           1. **Types d’insuline** :
+              - Insuline rapide ou ultra-rapide : Prise pendant ou juste avant les repas.
+              - Insuline lente ou basale : Maintient un niveau constant d’insuline tout au long de la journée.
+           2. **Modes d'administration** :
+              - Injections avec seringues ou stylos à insuline.
+              - Pompe à insuline : Fournit de l’insuline en continu.
+              - Pancréas artificiel (en cours de développement).
+        B. **Surveillance de la glycémie** :
+           - Utilisation de glucomètres ou de capteurs en continu (CGM) pour surveiller le taux de glucose.
+           - Objectif : Maintenir la glycémie dans la plage cible pour éviter les complications.
+        C. **Mode de vie** :
+           1. **Régime alimentaire** : Équilibrer les glucides, les protéines et les lipides.
+           2. **Activité physique** : L’exercice est bénéfique, mais nécessite des ajustements de l’insuline pour éviter l’hypoglycémie.
+           3. **Gestion du stress** : Le stress peut perturber la glycémie.
+
+  utter_traitement_type2:
+    - text: |
+        Le traitement du diabète de type 2 repose sur une combinaison de modifications du mode de vie, de médicaments et parfois d’insulinothérapie :
+        A. **Modifications du mode de vie** :
+           1. **Alimentation équilibrée** : Réduction des glucides raffinés et des sucres simples, augmentation des fibres alimentaires.
+           2. **Activité physique** : 150 minutes d'exercice modéré par semaine.
+           3. **Perte de poids** : Une perte de 5-10 % du poids corporel peut améliorer la sensibilité à l’insuline.
+        B. **Médicaments** :
+           1. **Antidiabétiques oraux** :
+              - Metformine : Médicament de première ligne.
+              - Sulfamides hypoglycémiants : Stimulent la sécrétion d’insuline (ex. gliclazide).
+              - Inhibiteurs de la DPP-4 : Augmentent les hormones incrétines (ex. sitagliptine).
+              - Inhibiteurs de SGLT2 : Réduisent la réabsorption du glucose dans les reins (ex. dapagliflozine).
+           2. **Injection d’agonistes GLP-1** : Stimulent la sécrétion d'insuline (ex. liraglutide).
+           3. **Insulinothérapie** (si nécessaire) : Prescrite lorsque les antidiabétiques oraux ne suffisent plus.
+
+  utter_traitement_gesta:
+    - text: |
+        Le traitement du diabète gestationnel vise à maintenir une glycémie normale pour protéger la mère et le fœtus :
+        A. **Modifications du mode de vie** :
+           1. **Régime alimentaire** : Répartition des repas en petites portions, réduction des glucides raffinés au profit des glucides complexes.
+           2. **Activité physique** : Marche quotidienne ou exercices adaptés pour améliorer la sensibilité à l'insuline.
+           3. **Surveillance de la glycémie** : Mesures régulières avec un glucomètre.
+        B. **Médicaments** :
+           - **Insuline** : Principal traitement si les modifications du mode de vie ne suffisent pas. L’insuline est sûre pour le fœtus.
+           - **Antidiabétiques oraux** (ex. metformine ou glyburide) : Parfois utilisés, mais leur sécurité pendant la grossesse est moins bien établie.
+
+  utter_complication_type1:
+    - text: |
+        Les complications possibles du diabète de type 1 incluent :
+        A. **Complications aiguës** :
+           1. **Hypoglycémie** : Baisse dangereuse du taux de glucose.
+              - Symptômes : Transpiration, tremblements, confusion, perte de conscience.
+           2. **Hyperglycémie** : Glycémie élevée.
+              - Symptômes : Soif, fatigue, vision floue.
+           3. **Acidocétose diabétique (ACD)** : Accumulation de cétones dans le sang, une urgence médicale.
+        B. **Complications chroniques** :
+           - **Maladies cardiovasculaires** (AVC, crise cardiaque).
+           - **Néphropathie diabétique** (atteinte des reins).
+           - **Neuropathie diabétique** (atteinte des nerfs).
+           - **Rétinopathie diabétique** (atteinte des yeux, peut conduire à la cécité).
+           - **Pied diabétique** (ulcères ou infections pouvant nécessiter une amputation).
+
+  utter_complication_type2:
+    - text: |
+        Les complications possibles du diabète de type 2 incluent :
+        A. **Complications aiguës** :
+           1. **Hyperglycémie** : Glycémie très élevée pouvant entraîner des troubles de la conscience.
+           2. **Hyperosmolarité** : Complication rare, due à une déshydratation sévère.
+        B. **Complications chroniques** :
+           1. **Complications microvasculaires** :
+              - **Rétinopathie diabétique** : Atteinte des yeux pouvant conduire à la cécité.
+              - **Néphropathie diabétique** : Insuffisance rénale.
+              - **Neuropathie diabétique** : Picotements, douleurs ou engourdissement des nerfs.
+           2. **Complications macrovasculaires** :
+              - **Maladies cardiovasculaires** (AVC, infarctus).
+              - **Artérite des membres inférieurs** (risque d'amputation).
+
+  utter_complication_gesta:
+    - text: |
+        Les conséquences et complications du diabète gestationnel incluent :
+        A. **Pour le bébé** :
+           1. **Macrosomie fœtale** : Risque accru de complications à l’accouchement (dystocie des épaules, césarienne).
+           2. **Hypoglycémie néonatale** : Baisse du taux de sucre chez le nouveau-né peu après la naissance.
+           3. **Risque accru de diabète et d’obésité à long terme**.
+        B. **Pour la mère** :
+           1. **Prééclampsie** : Hypertension artérielle sévère associée à des complications graves.
+           2. **Accouchement par césarienne** : Plus fréquent en cas de macrosomie.
+           3. **Risque accru de diabète de type 2** : Environ 50 % des femmes ayant eu un diabète gestationnel développent un diabète de type 2 dans les 10 à 20 ans.
+
+  utter_prevention_type1:
+    - text: |
+        Le diabète de type 1 ne peut pas être prévenu, car il est principalement dû à des facteurs génétiques et auto-immuns. Cependant, une gestion efficace de la santé globale peut aider à maintenir un mode de vie sain.
+
+  utter_prevention_type2:
+    - text: |
+        Le diabète de type 2 peut souvent être prévenu ou retardé grâce à un mode de vie sain.
+        A. Alimentation saine :
+        - Privilégier les aliments à faible indice glycémique.
+        - Limiter les boissons sucrées et les aliments transformés.
+        B. Activité physique :
+        - Intégrer une activité régulière pour améliorer la sensibilité à l’insuline.
+        C. Surveillance :
+        - En cas de facteurs de risque (obésité, antécédents familiaux), effectuer des bilans réguliers.
+
+  utter_prevention_gesta:
+    - text: |
+        Le diabète gestationnel peut parfois être évité en adoptant des habitudes de vie saines avant et pendant la grossesse.
+        A. Avant la grossesse :
+        - Maintenir un poids sain.
+        - Adopter une alimentation équilibrée et riche en fibres.
+        - Pratiquer une activité physique régulière.
+        B. Pendant la grossesse :
+        - Limiter les aliments à index glycémique élevé (sucres rapides).
+        - Effectuer des bilans médicaux réguliers, surtout en cas de facteurs de risque.
+
+
+  utter_perspectives_type1:
+    - text: |
+        Les perspectives et recherches pour le diabète de type 1 incluent :
+        - **Transplantation de cellules bêta :** Remplacement des cellules productrices d'insuline.
+        - **Immunothérapie :** Réduction ou prévention des attaques auto-immunes.
+        - **Pancréas artificiel :** Système automatisé pour ajuster l’insuline en temps réel.
+        - **Vaccins :** En cours de recherche pour prévenir le développement du diabète chez les personnes à risque.
+
+  utter_perspectives_type2:
+    - text: |
+        Les perspectives et recherches pour le diabète de type 2 incluent :
+        - **Médicaments innovants :** Développement de nouvelles molécules pour améliorer la gestion du glucose.
+        - **Techniques non médicamenteuses :** Chirurgie bariatrique pour les cas graves d’obésité.
+        - **Prévention :** Programmes d’éducation pour identifier les individus à risque et adopter des comportements sains.
+
+  utter_perspectives_gesta:
+    - text: |
+        Après l'accouchement, la glycémie revient souvent à la normale. Cependant, une surveillance à long terme est nécessaire.
+        A. **Recommandations post-partum** :
+            1. **Tests de glycémie :**
+                - Réalisation d’un test oral de tolérance au glucose 6 à 12 semaines après l’accouchement.
+            2. **Surveillance régulière :**
+                - Tests annuels pour dépister un éventuel diabète de type 2.
+        B. **Prévention du diabète de type 2** :
+            - Adopter un mode de vie sain.
+            - Maintenir un poids stable.
+
+#actions:
+  #- action_session_start
