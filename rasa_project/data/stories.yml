@@ -1,0 +1,210 @@
+version: "3.1"
+
+stories:
+  - story: salutation et humeur positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: bonne_humeur
+      - action: utter_bonne_humeur
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: salutation et humeur négative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mauvaise_humeur
+      - action: utter_mauvaise_humeur
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: salutation sans humeur définie
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: demander des informations sur le diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: informatif_gestionnel
+      - action: utter_informations_gestionnel
+
+  - story: demander des informations sur le diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: informatif_type1
+      - action: utter_informations_type_1
+
+  - story: demander des informations sur le diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: informatif_type2
+      - action: utter_informations_type_2
+
+  - story: demander quel diabète
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+
+  - story: demander les causes du diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: cause_gesta
+      - action: utter_causes_gestionnel
+
+  - story: demander les causes du diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: cause_type1
+      - action: utter_causes_type1
+
+  - story: demander les causes du diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: cause_type2
+      - action: utter_causes_type2
+
+  - story: demander les symptômes du diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: symptome_gesta
+      - action: utter_symptome_gesta
+
+  - story: demander les symptômes du diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: symptome_type1
+      - action: utter_symptome_type1
+
+  - story: demander les symptômes du diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: symptome_type2
+      - action: utter_symptome_type2
+
+  - story: demander les facteurs de risque du diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: risque_gesta
+      - action: utter_risque_gesta
+
+  - story: demander les facteurs de risque du diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: risque_type1
+      - action: utter_risque_type1
+
+  - story: demander les facteurs de risque du diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: risque_type2
+      - action: utter_risque_type2
+
+  - story: demander diagnostic diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: diagnostic_type1
+      - action: utter_diagnostic_type1
+
+  - story: demander diagnostic diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: diagnostic_type2
+      - action: utter_diagnostic_type2
+
+  - story: demander diagnostic diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: diagnostic_gesta
+      - action: utter_diagnostic_gesta
+
+  - story: demander traitement diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: traitement_type1
+      - action: utter_traitement_type1
+
+  - story: demander traitement diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: traitement_type2
+      - action: utter_traitement_type2
+
+  - story: demander traitement diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: traitement_gesta
+      - action: utter_traitement_gesta
+      
+  - story: demander les complications du diabète de type 1
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: complication_type1
+      - action: utter_complication_type1
+
+  - story: demander les complications du diabète de type 2
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: complication_type2
+      - action: utter_complication_type2
+
+  - story: demander les complications du diabète gestationnel
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+      - intent: complication_gesta
+      - action: utter_complication_gesta
+
+  - story: demander la prévention du diabète de type 1
+    steps:
+      - intent: prevention_type1
+      - action: utter_prevention_type1
+
+  - story: demander la prévention du diabète de type 2
+    steps:
+      - intent: prevention_type2
+      - action: utter_prevention_type2
+
+  - story: demander la prévention du diabète gestationnel
+    steps:
+      - intent: prevention_gesta
+      - action: utter_prevention_gesta
+
+  - story: demander les perspectives du diabète de type 1
+    steps:
+      - intent: perspectives_type1
+      - action: utter_perspectives_type1
+
+  - story: demander les perspectives du diabète de type 2
+    steps:
+      - intent: perspectives_type2
+      - action: utter_perspectives_type2
+
+  - story: demander les perspectives post-partum du diabète gestationnel
+    steps:
+      - intent: perspectives_gesta
+      - action: utter_perspectives_gesta
+

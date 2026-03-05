@@ -1,0 +1,311 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Bonjour
+      - Salut
+      - Coucou
+      - Hey
+      - Hello
+      - Hi
+      - Bonsoir
+      - Comment ça va ?
+      - Salut, comment ça va ?
+
+  - intent: hors_sujet
+    examples: |
+      - Quel temps fait-il aujourd'hui ?
+      - Peux-tu me parler de l'espace ?
+      - Qui est le président des États-Unis ?
+      - Quelle est la météo en ce moment ?
+      - Quel est le meilleur film du moment ?
+      - Comment faire une pizza ?
+      - Parle-moi des voitures électriques
+      - Que penses-tu des réseaux sociaux ?
+      - Quel est le dernier jeu vidéo à la mode ?
+      - Tu crois aux extraterrestres ?
+      - Comment fonctionnent les fusées ?
+      - Qui a inventé l'ordinateur ?
+      - Quel est ton avis sur la politique ?
+      - Quelle est la capitale de l'Italie ?
+      - Pourquoi le ciel est bleu ?
+      - Comment faire un gâteau au chocolat ?
+      - Quelle est la meilleure voiture en 2025 ?
+      - Peux-tu me parler des crypto-monnaies ?
+      - Quel est le dernier smartphone sorti ?
+      - Que penses-tu des chats ?
+      - Comment fonctionne l'intelligence artificielle ?
+      - Tu es un robot ou un humain ?
+      - Peux-tu prédire mon avenir ?
+      - Qui a gagné la coupe du monde de football ?
+      - Quelle est la recette des crêpes ?
+      - Pourquoi la mer est salée ?
+      - Quel est le prochain film Marvel ?
+      - Comment apprendre à coder ?
+      - Quelle est la meilleure musique du moment ?
+      - Où se trouve la Tour Eiffel ?
+      - Pourquoi les oiseaux chantent-ils ?
+      - Comment fonctionne une voiture électrique ?
+      - Pourquoi les abeilles font du miel ?
+      - Quelle est la signification de mon prénom ?
+      - Qui a découvert l’Amérique ?
+      - Pourquoi les chiens aboient-ils ?
+      - Qui est le meilleur joueur de foot ?
+      - Quel est le dernier iPhone sorti ?
+      - Quelle est la meilleure série Netflix ?
+      - Quel est le plus grand pays du monde ?
+      - Comment fonctionne une horloge ?
+      - Pourquoi les poissons vivent-ils dans l’eau ?
+      - Combien mesure la tour Eiffel ?
+      - Quelle est la profondeur de l'océan ?
+
+  - intent: bonne_humeur
+    examples: |
+      - Je vais bien
+      - Ça va super
+      - Très bien
+      - ça va
+      - Super
+
+  - intent: mauvaise_humeur
+    examples: |
+      - Je vais pas bien
+      - Je ne me sens pas bien
+      - Je me sens mal
+      - Je vais mal
+      - Bof
+      - ça peut aller
+
+  - intent: goodbye
+    examples: |
+      - Merci
+      - Bye
+      - Je me déconnecte
+      - À plus tard
+      - À bientôt
+      - Ciao
+
+  - intent: diabete
+    examples: |
+      - diabete
+      - C'est quoi le diabète ?
+      - Parle-moi du diabète
+      - Je veux savoir ce qu'est le diabète
+      - Dis-moi ce qu'est le diabète
+      - De quel type de diabète tu parles ?
+
+  - intent: informatif_gestionnel
+    examples: |
+      - diabete gestationnel
+      - diabete gestationnel c'est quoi ?
+      - C'est quoi le diabète gestationnel ?
+      - Peux-tu m'expliquer ce qu'est le diabète gestationnel ?
+
+  - intent: informatif_type1
+    examples: |
+      - diabete type 1
+      - diabete type 1 c'est quoi ?
+      - C'est quoi le diabète de type 1 ?
+      - Peux-tu m'expliquer ce qu'est le diabète de type 1 ?
+
+  - intent: informatif_type2
+    examples: |
+      - diabete type 2
+      - diabete type 2 c'est quoi ?
+      - C'est quoi le diabète de type 2 ?
+      - Peux-tu m'expliquer ce qu'est le diabète de type 2 ?
+
+  - intent: symptome_gesta
+    examples: |
+      - symptômes du diabète gestationnel
+      - symptômes diabète gestationnel
+      - Quels sont les symptômes du diabète gestationnel ?
+      - Parle-moi des symptômes du diabète gestationnel
+      - Comment reconnaître les symptômes du diabète gestationnel ?
+      - Quels signes doivent m'alerter sur le diabète gestationnel ?
+
+  - intent: symptome_type1
+    examples: |
+      - symptômes du diabète type 1
+      - symptômes diabète type 1
+      - Quels sont les symptômes du diabète de type 1 ?
+      - Parle-moi des symptômes du diabète de type 1
+      - Comment reconnaître les symptômes du diabète de type 1 ?
+      - Quels signes doivent m'alerter sur le diabète de type 1 ?
+
+  - intent: symptome_type2
+    examples: |
+      - symptômes du diabète type 2
+      - symptômes diabète type 2
+      - Quels sont les symptômes du diabète de type 2 ?
+      - Parle-moi des symptômes du diabète de type 2
+      - Comment reconnaître les symptômes du diabète de type 2 ?
+      - Quels signes doivent m'alerter sur le diabète de type 2 ?
+
+  - intent: cause_gesta
+    examples: |
+      - cause gestationnel
+      - Quelles sont les causes du diabète gestationnel ?
+      - Pourquoi le diabète gestationnel apparaît-il ?
+
+  - intent: cause_type1
+    examples: |
+      - cause type 1
+      - Quelles sont les causes du diabète de type 1 ?
+      - Pourquoi le diabète de type 1 se développe-t-il ?
+
+  - intent: cause_type2
+    examples: |
+      - cause type 2
+      - Quelles sont les causes du diabète de type 2 ?
+      - Pourquoi le diabète de type 2 apparaît-il ?
+
+  - intent: risque_gesta
+    examples: |
+      - risque diabète gestationnel
+      - Quels sont les facteurs de risque du diabète gestationnel ?
+      - Parle-moi des facteurs de risque du diabète gestationnel
+      - Qu'est-ce qui augmente le risque du diabète gestationnel ?
+      - Quels sont les facteurs qui contribuent au diabète gestationnel ?
+      - Quels risques à long terme pour le diabète de type 1 ?
+
+  - intent: risque_type1
+    examples: |
+      - risque diabète type 1
+      - Quels sont les facteurs de risque du diabète de type 1 ?
+      - Parle-moi des facteurs de risque du diabète de type 1
+      - Qu'est-ce qui augmente le risque du diabète de type 1 ?
+      - Quels sont les facteurs qui contribuent au diabète de type 1 ?
+
+  - intent: risque_type2
+    examples: |
+      - risque diabète type 2
+      - Quels sont les facteurs de risque du diabète de type 2 ?
+      - Parle-moi des facteurs de risque du diabète de type 2
+      - Qu'est-ce qui augmente le risque du diabète de type 2 ?
+      - Quels sont les facteurs qui contribuent au diabète de type 2 ?
+
+  - intent: diagnostic_type1
+    examples: |
+      - diagnostic de type 1
+      - Quels sont les tests pour diagnostiquer le diabète de type 1 ?
+      - Comment diagnostiquer le diabète de type 1 ?
+      - Quelles sont les méthodes de diagnostic pour le diabète de type 1 ?
+      - Quels tests sont utilisés pour le diabète de type 1 ?
+
+  - intent: diagnostic_type2
+    examples: |
+      - diagnostic de type 2
+      - Quels tests diagnostiquent le diabète de type 2 ?
+      - Comment diagnostique-t-on le diabète de type 2 ?
+      - Quels sont les tests de dépistage pour le diabète de type 2 ?
+      - Quelles sont les méthodes de diagnostic du diabète de type 2 ?
+
+  - intent: diagnostic_gesta
+    examples: |
+      - diagnostic diabète gestationnel
+      - Comment diagnostique-t-on le diabète gestationnel ?
+      - Quels tests sont utilisés pour détecter le diabète gestationnel ?
+      - Quels sont les critères diagnostiques du diabète gestationnel ?
+      - Quand effectuer les tests pour le diabète gestationnel ?
+
+  - intent: traitement_gesta
+    examples: |
+      - traitement diabète gestationnel
+      - Quels sont les traitements pour le diabète gestationnel ?
+      - Parle-moi des traitements pour le diabète gestationnel.
+      - Comment traiter le diabète gestationnel ?
+      - Que faire pour soigner le diabète gestationnel ?
+
+  - intent: traitement_type1
+    examples: |
+      - traitement diabète type 1
+      - Quels sont les traitements pour le diabète de type 1 ?
+      - Parle-moi des traitements pour le diabète de type 1.
+      - Comment traiter le diabète de type 1 ?
+      - Que faire pour gérer le diabète de type 1 ?
+
+  - intent: traitement_type2
+    examples: |
+      - traitement diabète type 2
+      - Quels sont les traitements pour le diabète de type 2 ?
+      - Parle-moi des traitements pour le diabète de type 2.
+      - Comment traiter le diabète de type 2 ?
+      - Que faire pour gérer le diabète de type 2 ?
+
+
+  - intent: complication_type1
+    examples: |
+      - complication diabète type 1
+      - Quelles sont les complications possibles du diabète de type 1 ?
+      - Parle-moi des complications du diabète de type 1
+      - Quelles sont les complications aiguës et chroniques du diabète de type 1 ?
+      
+
+  - intent: complication_type2
+    examples: |
+      - complication diabète type 2
+      - Quelles sont les complications possibles du diabète de type 2 ?
+      - Parle-moi des complications du diabète de type 2
+      - Quelles sont les complications aiguës et chroniques du diabète de type 2 ?
+      - Quels risques à long terme pour le diabète de type 2 ?
+
+  - intent: complication_gesta
+    examples: |
+      - complication diabète gestationnel
+      - Quelles sont les complications possibles du diabète gestationnel ?
+      - Parle-moi des complications du diabète gestationnel
+      - Quels risques à court et à long terme pour le diabète gestationnel ?
+      - Quelles sont les conséquences pour la mère et l’enfant en cas de diabète gestationnel ?
+
+
+  - intent: prevention_type1
+    examples: |
+      - prevention diabète type 1
+      - Comment prévenir le diabète de type 1 ?
+      - Quels sont les moyens de prévenir le diabète de type 1 ?
+      - Peut-on prévenir le diabète de type 1 ?
+      - Parle-moi de la prévention du diabète de type 1.
+
+
+  - intent: prevention_type2
+    examples: |
+      - prevention diabète type 2
+      - Comment prévenir le diabète de type 2 ?
+      - Quels sont les moyens de prévenir le diabète de type 2 ?
+      - Peut-on prévenir le diabète de type 2 ?
+      - Parle-moi de la prévention du diabète de type 2.
+
+  - intent: prevention_gesta
+    examples: |
+      - prevention diabète gestationnel
+      - Comment prévenir le diabète gestationnel ?
+      - Quels sont les moyens de prévenir le diabète gestationnel ?
+      - Peut-on prévenir le diabète gestationnel ?
+      - Parle-moi de la prévention du diabète gestationnel.
+
+  - intent: perspectives_type1
+    examples: |
+      - perspectives diabète de type 1
+      - Quelles sont les perspectives de recherche pour le diabète de type 1 ?
+      - Parle-moi des recherches sur le diabète de type 1.
+      - Quelles avancées pour le diabète de type 1 ?
+      - Quels sont les traitements futurs pour le diabète de type 1 ?
+
+  - intent: perspectives_type2
+    examples: |
+      - perspectives diabète de type 2
+      - Quelles sont les perspectives de recherche pour le diabète de type 2 ?
+      - Parle-moi des recherches sur le diabète de type 2.
+      - Quelles avancées pour le diabète de type 2 ?
+      - Quels sont les traitements futurs pour le diabète de type 2 ?
+
+  - intent: perspectives_gesta
+    examples: |
+      - perspectives  diabète gestationnel
+      - Quelles sont les perspectives après l'accouchement pour le diabète gestationnel ?
+      - Parle-moi des recommandations post-partum pour le diabète gestationnel.
+      - Quelles sont les perspectives à long terme pour le diabète gestationnel ?
+
+

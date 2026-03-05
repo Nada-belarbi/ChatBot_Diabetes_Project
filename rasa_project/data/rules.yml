@@ -1,0 +1,128 @@
+version: "3.1"
+
+rules:
+  #- rule: Saluer automatiquement au démarrage
+   # steps:
+      #- action: action_session_start
+      #- action: utter_greet
+
+  - rule: Répondre à une salutation
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Demander quel type de diabète
+    steps:
+      - intent: diabete
+      - action: utter_diabete_question
+
+  - rule: Répondre quand la question est hors sujet
+    steps:
+      - intent: hors_sujet
+      - action: utter_hors_sujet
+
+  - rule: Répondre aux causes du diabète gestationnel
+    steps:
+      - intent: cause_gesta
+      - action: utter_causes_gestionnel
+
+  - rule: Répondre aux causes du diabète de type 1
+    steps:
+      - intent: cause_type1
+      - action: utter_causes_type1
+
+  - rule: Répondre aux causes du diabète de type 2
+    steps:
+      - intent: cause_type2
+      - action: utter_causes_type2
+
+  - rule: Répondre aux symptômes du diabète gestationnel
+    steps:
+      - intent: symptome_gesta
+      - action: utter_symptome_gesta
+
+  - rule: Répondre aux symptômes du diabète de type 1
+    steps:
+      - intent: symptome_type1
+      - action: utter_symptome_type1
+
+  - rule: Répondre aux symptômes du diabète de type 2
+    steps:
+      - intent: symptome_type2
+      - action: utter_symptome_type2
+
+  - rule: Demander le diagnostic du diabète de type 1
+    steps:
+      - intent: diagnostic_type1
+      - action: utter_diagnostic_type1
+
+  - rule: Demander le diagnostic du diabète de type 2
+    steps:
+      - intent: diagnostic_type2
+      - action: utter_diagnostic_type2
+
+  - rule: Demander le diagnostic du diabète gestationnel
+    steps:
+      - intent: diagnostic_gesta
+      - action: utter_diagnostic_gesta
+
+  - rule: Demander le traitement du diabète de type 1
+    steps:
+      - intent: traitement_type1
+      - action: utter_traitement_type1
+
+  - rule: Demander le traitement du diabète de type 2
+    steps:
+      - intent: traitement_type2
+      - action: utter_traitement_type2
+
+  - rule: Demander le traitement du diabète gestationnel
+    steps:
+      - intent: traitement_gesta
+      - action: utter_traitement_gesta
+
+  - rule: Demander les complications du diabète de type 1
+    steps:
+      - intent: complication_type1
+      - action: utter_complication_type1
+
+  - rule: Demander les complications du diabète de type 2
+    steps:
+      - intent: complication_type2
+      - action: utter_complication_type2
+
+  - rule: Demander les complications du diabète gestationnel
+    steps:
+      - intent: complication_gesta
+      - action: utter_complication_gesta
+
+  - rule: Répondre à la prévention du diabète de type 1
+    steps:
+      - intent: prevention_type1
+      - action: utter_prevention_type1
+
+  - rule: Répondre à la prévention du diabète de type 2
+    steps:
+      - intent: prevention_type2
+      - action: utter_prevention_type2
+
+  - rule: Répondre à la prévention du diabète gestationnel
+    steps:
+      - intent: prevention_gesta
+      - action: utter_prevention_gesta
+
+  - rule: Répondre aux perspectives du diabète de type 1
+    steps:
+      - intent: perspectives_type1
+      - action: utter_perspectives_type1
+
+  - rule: Répondre aux perspectives du diabète de type 2
+    steps:
+      - intent: perspectives_type2
+      - action: utter_perspectives_type2
+
+  - rule: Répondre aux perspectives post-partum du diabète gestationnel
+    steps:
+      - intent: perspectives_gesta
+      - action: utter_perspectives_gesta
+
